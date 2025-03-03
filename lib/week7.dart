@@ -29,7 +29,6 @@ class Week7 extends StatefulWidget {
 }
 
 class _Week7State extends State<Week7> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,13 +36,16 @@ class _Week7State extends State<Week7> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+      body: Center(
+        child: Form(
+            child: TextFormField(
+              decoration: InputDecoration(
+                hintText: "put a word here",
+                labelText: "Words (more words)"
+              ),
+            )
           )
-        ),
+        )
     );
   }
 }
-
-
