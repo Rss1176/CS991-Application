@@ -37,15 +37,30 @@ class _Week7State extends State<Week7> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: Form(
-            child: TextFormField(
-              decoration: InputDecoration(
-                hintText: "put a word here",
-                labelText: "Words (more words)"
-              ),
-            )
-          )
-        )
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Form(
+            child: Column(
+              children: [
+                SizedBox(height:50.0),
+                TextFormField(
+                  decoration: InputDecoration(
+                    hintText: "ross@email.com",
+                    labelText: "Username (email address)"
+                  ),
+                ),
+                SizedBox(height: 16.0),
+                TextFormField(
+                  decoration: InputDecoration(
+                    hintText: "",
+                    labelText: "Password"
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
