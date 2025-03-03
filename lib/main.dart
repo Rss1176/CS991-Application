@@ -1,5 +1,12 @@
 import 'package:flutter/material.dart';
-// import 'week1.dart';
+import 'week1.dart';
+// import 'week2.dart';
+// import 'week3.dart';
+// import 'week4.dart';
+// import 'week5.dart';
+// import 'week6.dart';
+import 'week7.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -17,19 +24,19 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 239, 239, 239)),
         useMaterial3: true,
       ),
-      home: const Week1(title: "CS991 Dashboard"),
+      home: const MyHomePage(title: "CS991 Dashboard"),
     );
   }
 }
 
-class Week1 extends StatefulWidget {
-  const Week1({super.key, required this.title});
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key, required this.title});
   final String title;
   @override
-  State<Week1> createState() => _Week1State();
+  State<MyHomePage> createState() => _MyHomePageState();
 }
 
-class _Week1State extends State<Week1> {
+class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +58,7 @@ class _Week1State extends State<Week1> {
                 onPressed: () {
                   Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const Week1(title: 'Week 1: ',)));
+                      MaterialPageRoute(builder: (context) => const Week1(title: 'Week 1: Design Principles',)));
                       },
                 style: ElevatedButton.styleFrom(
                       backgroundColor: const Color.fromARGB(255, 255, 137, 128), 
@@ -142,7 +149,11 @@ class _Week1State extends State<Week1> {
               height: 100,
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const Week7(title: 'Week 7: Flutter Forms',)));
+                      },
                 style: ElevatedButton.styleFrom(
                       backgroundColor: const Color.fromARGB(255, 209, 130, 255), 
                       minimumSize: Size(double.infinity, 100),
